@@ -50,3 +50,25 @@ function getMatrix(nodes, edges) {
     }
     return matrix;
 }
+
+function BreadthFirstSearch(matrix, elementId, callback) {
+    const checked = [];
+    const forCheck =  [elementId]
+
+    while (forCheck.length) {
+        let index = forCheck.shift();
+        checked.push(index)
+
+        callback(index)
+
+        for (let i = 0; i < matrix[index].length; i++) {
+            if (matrix[index][i] && !checked.includes(i) && !forCheck.includes(i)) {
+                forCheck.push(i)
+            }
+        }
+    }
+}
+
+BreadthFirstSearch(matrix, 3, (index) => {
+    console.log(index)
+})
