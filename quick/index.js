@@ -1,3 +1,5 @@
+console.log('release tag v1')
+
 const quickSort = (arr, low, hi) => {
     const a = Math.floor(Math.random() * arr.length)
     const pivot = arr[a]
