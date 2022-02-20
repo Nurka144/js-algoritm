@@ -1,3 +1,5 @@
+console.log('quick')
+
 const quickSort = (arr, low, hi) => {
     const a = Math.floor(Math.random() * arr.length)
     const pivot = arr[a]
